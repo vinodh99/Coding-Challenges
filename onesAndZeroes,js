@@ -1,0 +1,13 @@
+const binaryArrayToNumber = arr => {
+let acc=0;
+let length=arr.length-1
+  return arr.reduce(acc, val){
+  if(val==0){
+  return acc
+  }else{
+  acc+=2^(length);
+  length=length-1;
+  return acc;
+  }
+  }
+};
