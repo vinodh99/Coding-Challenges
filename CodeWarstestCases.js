@@ -16,11 +16,11 @@
 // var assert = require("chai").assert;
 // require("chai").should();
 
-describe("Solution", function(){
-  it("should test for something", function(){
-    Test.assertEquals("actual", "expected", "This is just an example of how you can write your own TDD tests");
-  });
-});
+// describe("Solution", function(){
+//   it("should test for something", function(){
+//     Test.assertEquals("actual", "expected", "This is just an example of how you can write your own TDD tests");
+//   });
+// });
 
 
 function rgb(r, g, b){
@@ -43,3 +43,24 @@ function rgb(r, g, b){
   
   return (red+green+blue).toUpperCase();
 }
+
+function rgb(r, g, b){
+  return toHex(r)+toHex(g)+toHex(b);
+}
+
+function toHex(d) {
+    if(d < 0 ) {return "00";}
+    if(d > 255 ) {return "FF";}
+    console.log(("0"+(Number(d).toString(16))).slice(-2))
+    return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
+}
+
+
+rgb(12,12,12)
+
+
+
+
+
+
+
