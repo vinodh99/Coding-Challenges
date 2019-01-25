@@ -5,6 +5,7 @@ function nextBigger(n){
   let arr=num.map(Number).sort()
   console.log(arr)
   console.log(arr)
+  // added
   for(let i=num.length-1;i>=0;i--){
       if(num[i]>num[i-1]){
         let temp= num[i]
