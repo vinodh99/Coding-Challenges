@@ -12,10 +12,10 @@ var twoSum = function(nums, target) {
     }
     return null
 };
-console.log(twoSum([1,2,3,4,5,6,7,8,9,10], 17))
+// console.log(twoSum([1,2,3,4,5,6,7,8,9,10], 17))
 
 // bet solution
-var twoSum = function(nums, target) {
+var twoSum2 = function(nums, target) {
   var hashTable = {}, result = [];
       
   for(var i=0; i<nums.length; i++){
@@ -23,6 +23,7 @@ var twoSum = function(nums, target) {
 		
 	if(typeof hashTable[findthisnum]!="undefined"){
        result.push(hashTable[findthisnum],i);
+       console.log(hashTable)
        return result;
     }else{
       hashTable[nums[i]] = i;
@@ -30,3 +31,5 @@ var twoSum = function(nums, target) {
   }
   return result;
 };
+
+console.log(twoSum2([1,2,3,4,5,6,7,8,9,10], 17))
