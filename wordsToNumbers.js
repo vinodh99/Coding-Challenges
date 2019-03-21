@@ -31,41 +31,22 @@ var Small = {
 
 var Magnitude = {
   thousand: 1000,
-  million: 1000000,
-  billion: 1000000000,
-  trillion: 1000000000000,
-  quadrillion: 1000000000000000,
-  quintillion: 1000000000000000000,
-  sextillion: 1000000000000000000000,
-  septillion: 1000000000000000000000000,
-  octillion: 1000000000000000000000000000,
-  nonillion: 1000000000000000000000000000000,
-  decillion: 1000000000000000000000000000000000
+  hundred: 100
 };
 
-var a, n, g;
-
 function text2num(s) {
-  a = s.toString().split(/[\s-]+/);
-  n = 0;
-  g = 0;
-  a.forEach(feach);
-  return n + g;
-}
-
-function feach(w) {
-  var x = Small[w];
-  if (x != null) {
-    g = g + x;
-  } else if (w == "hundred") {
-    g = g * 100;
-  } else {
-    x = Magnitude[w];
-    if (x != null) {
-      n = n + g * x;
-      g = 0;
-    } else {
-      alert("Unknown number: " + w);
+  let arr = s.split(" ");
+  let num = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] in Small) {
+      let val = arr[i];
+      num.push(Small[val]);
+    }
+    if (arr[i] in Magnitude) {
+      num[num.length - 1] = num[num.length - 1] * Magnitude[arr[i]];
     }
   }
+  console.log(num);
 }
+
+text2num("one thousand two hundred twenty two");
