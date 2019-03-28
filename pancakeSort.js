@@ -29,5 +29,3 @@ function maxIndex(arr, k) {
 }
 
 console.log(panCake([4, 5, 3, 6, 2, 1]));
-// arr=[5,3,4,2,1]
-//

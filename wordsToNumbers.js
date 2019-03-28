@@ -46,7 +46,6 @@ function text2num(s) {
       num[num.length - 1] = num[num.length - 1] * Magnitude[arr[i]];
     }
   }
-  console.log(num);
 }
 
 text2num("one thousand two hundred twenty two");
