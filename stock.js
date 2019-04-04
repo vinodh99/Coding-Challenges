@@ -5,7 +5,7 @@
 // then find the maximum difference
 // then find t
 
-let arr = [5, 4, 8, 9, 3, 12, 1, 11];
+let arr = [5, 4, 8, 9, 3, 12, 11, 1];
 let profit = 0;
 function stock(arr, start = 0, end = arr.length) {
   let max = findMax(arr, start, end);
@@ -14,7 +14,7 @@ function stock(arr, start = 0, end = arr.length) {
       profit = arr[max] - arr[i];
     }
   }
-  if (max !== arr.length - 1) {
+  if (arr.length - 1 - max) {
     stock(arr, max + 1);
   }
   console.log(profit);
