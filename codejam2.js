@@ -38,7 +38,7 @@ rl.on("line", function(line) {
     testCases = parseInt(line);
     return;
   }
-
+  // not working
   function solve(val) {
     let arr = val.split("");
     let res = [],
