@@ -41,3 +41,30 @@ console.log(twoSum2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 17));
 
 // algo expert
 
+function twoNumberSum(array, targetSum) {
+  let map = {};
+  for (let i = 0; i < array.length; i++) {
+    if (map[targetSum - array[i]] !== undefined) {
+      let x = array[i],
+        y = targetSum - array[i];
+      return [x <= y ? x : y, x >= y ? x : y];
+    } else {
+      map[array[i]] = 1;
+    }
+  }
+  return [];
+}
+// algo expert solution
+function twoNumberSum(array, targetSum) {
+  let map = {};
+  for (let i = 0; i < array.length; i++) {
+    if (map[targetSum - array[i]] !== undefined) {
+      let x = array[i],
+        y = targetSum - array[i];
+      return [x <= y ? x : y, x >= y ? x : y];
+    } else {
+      map[array[i]] = 1;
+    }
+  }
+  return [];
+}
