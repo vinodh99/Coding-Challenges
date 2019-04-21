@@ -9,9 +9,17 @@ function balancedBrackets(string) {
     if (opening.includes(char)) {
       arr.push(char);
     } else if (closing.includes(char)) {
+        if(!arr.length){
+            return false;
+        }
+        else if(arr[arr.length-1]===matching[char]){
+            arr.pop();
+        } else{
+            return false;
+        }
     }
   }
-  return true;
+  return arr.length===0;
 }
 
 // Do not edit the line below.
