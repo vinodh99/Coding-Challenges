@@ -1,15 +1,17 @@
-function binarySearch(array, target, left = 0, right = array.length - 1) {
-  let mid = Math.abs((left + right) / 2);
-  console.log(mid);
-  if (target === array[mid]) {
-    return mid;
-  } else if (target > array[mid]) {
-    binarySearch(array, target, mid, right);
-  } else if (target < array[mid]) {
-    binarySearch(array, target, left, mid);
-  } else {
-    return -1;
+function binarySearch(array, target) {
+  let L = 0;
+  let R = array.length - 1;
+  while (R >= L) {
+    let mid = Math.floor((L + R) / 2);
+    if (array[mid] < target) {
+      L = mid + 1;
+    } else if (target < array[mid]) {
+      R = mid - 1;
+    } else {
+      return mid;
+    }
   }
+  return -1;
 }
 
 console.log(binarySearch([1, 2, 3, 4, 5], 4));
