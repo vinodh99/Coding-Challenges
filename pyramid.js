@@ -1,8 +1,4 @@
 
-
-
-
-
 pyramid=(k)=>{
 	arr2=[];
 	result=[];

@@ -14,6 +14,7 @@ console.log(powerset([1, 2, 3]));
 
 // recursive solution
 
+// time and space complexity o(n2^n)
 function powerset(array, index = null) {
   if (index === null) {
     index = array.length - 1;
